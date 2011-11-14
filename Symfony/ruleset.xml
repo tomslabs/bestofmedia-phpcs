@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="Symfony">
+ <description>Symfony coding standards code sniffer ruleset.</description>
+</ruleset>
