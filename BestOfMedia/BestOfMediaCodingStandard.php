@@ -7,7 +7,7 @@ ini_set('error_reporting', E_ALL & ~E_NOTICE);
 /**
  * Symfony Coding Standard.
  */
-class PHP_CodeSniffer_Standards_Symfony_SymfonyCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
+class PHP_CodeSniffer_Standards_BestOfMedia_BestOfMediaCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
 {
     /**
      * Return a list of external sniffs to include with this standard.
