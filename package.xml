@@ -26,8 +26,7 @@ foo bar
  </notes>
  <contents>
   <dir baseinstalldir="PHP" name="/">
-   <file baseinstalldir="PHP" md5sum="a29e84d4d7ca82d11943ab3d2d69ca74" name="PHP/CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
-   <file baseinstalldir="PHP" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="README" role="data" />
+   <file baseinstalldir="PHP" md5sum="a29e84d4d7ca82d11943ab3d2d69ca74" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
   </dir>
  </contents>
  <dependencies>
