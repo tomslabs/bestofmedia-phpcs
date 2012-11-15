@@ -5,5 +5,8 @@ cd $DIR
 
 pear package-validate package.xml
 VERSION=$( xmllint --xpath "string(/*[name()='package']/*[name()='version']/*[name()='release'])" package.xml )
-rm *.tgz
-tar -zcvf PHP_CodeSniffer_Standards_BestOfMedia-$VERSION.tgz package.xml CodeSniffer/*
+
+mkdir -p PHP_CodeSniffer_Standards_BestOfMedia-$VERSION
+cp -R CodeSniffer PHP_CodeSniffer_Standards_BestOfMedia-$VERSION
+tar -zcvf PHP_CodeSniffer_Standards_BestOfMedia-$VERSION.tgz package.xml PHP_CodeSniffer_Standards_BestOfMedia-$VERSION
+rm -Rf PHP_CodeSniffer_Standards_BestOfMedia-$VERSION
