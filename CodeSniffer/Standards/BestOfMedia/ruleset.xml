@@ -2,6 +2,14 @@
 <ruleset name="BestOfMedia">
  <description>BestOfMedia - Extended Symfony coding standards code sniffer ruleset.</description>
 
+  <rule ref="BestOfMedia.Symfony.SfActionsPerClass.Messy">
+    <severity>10</severity>
+  </rule>
+
+  <rule ref="BestOfMedia.Symfony.SfActionsPerClass.TooMany">
+    <severity>10</severity>
+  </rule>
+
   <rule ref="BestOfMedia.Symfony.SfActionsMethodDeclaration.MustBePublic">
     <severity>10</severity>
   </rule>

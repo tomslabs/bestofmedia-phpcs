@@ -39,13 +39,13 @@ class BestOfMedia_Tests_Symfony_SfActionsPerClassUnitTest extends AbstractBestOf
      */
     public function getErrorList($testFile='') {
         switch ($testFile) {
-        case 'ActionsPerClassUnitTest.1.inc':
-        case 'ActionsPerClassUnitTest.3.inc':
+        case 'SfActionsPerClassUnitTest.1.inc':
+        case 'SfActionsPerClassUnitTest.3.inc':
           return array(
                 2  => 0,
                );
 
-        case 'ActionsPerClassUnitTest.2.inc':
+        case 'SfActionsPerClassUnitTest.2.inc':
 
           return array(
                 2  => 1,
@@ -67,13 +67,13 @@ class BestOfMedia_Tests_Symfony_SfActionsPerClassUnitTest extends AbstractBestOf
     public function getWarningList($testFile='')
     {
         switch ($testFile) {
-        case 'ActionsPerClassUnitTest.2.inc':
-        case 'ActionsPerClassUnitTest.3.inc':
+        case 'SfActionsPerClassUnitTest.2.inc':
+        case 'SfActionsPerClassUnitTest.3.inc':
           return array(
                 2  => 0,
                );
 
-        case 'ActionsPerClassUnitTest.1.inc':
+        case 'SfActionsPerClassUnitTest.1.inc':
 
           return array(
                 2  => 1,
