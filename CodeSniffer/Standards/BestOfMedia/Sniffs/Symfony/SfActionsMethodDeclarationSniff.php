@@ -55,6 +55,14 @@ class BestOfMedia_Sniffs_Symfony_SfActionsMethodDeclarationSniff extends PHP_Cod
       $error = "An action method in a sfActions class MUST be explicitly public. %s::%s has no explicit scope.";
       $phpcsFile->addWarning($error, $stackPtr, 'MustBeExplicitlyPublic', array($className, $methodName));
     }
+
+    $parameters = $phpcsFile->getMethodParameters($stackPtr);
+    if(1 !== count($parameters) ||
+      $parameters[0]['name'] !== '$request' ||
+      $parameters[0]['type_hint'] !== 'sfWebRequest') {
+      $error = "An action method in a sfActions class MUST declare a single \$request, hinted as sfWebRequest, not passed by reference.";
+      $phpcsFile->addError($error, $stackPtr, 'MustBeExplicitlyPublic', array($className, $methodName));
+    }
   }
 
 }

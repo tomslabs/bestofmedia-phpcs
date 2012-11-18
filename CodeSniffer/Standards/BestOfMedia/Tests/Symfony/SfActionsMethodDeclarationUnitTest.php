@@ -38,6 +38,8 @@ class BestOfMedia_Tests_Symfony_SfActionsMethodDeclarationUnitTest extends Abstr
     public function getErrorList() {
         return array(
                 16  => 1,
+                22  => 1,
+                28  => 1,
         );
     }//end getErrorList()
 
