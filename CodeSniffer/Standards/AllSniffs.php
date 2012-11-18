@@ -95,7 +95,7 @@ class PHP_CodeSniffer_Standards_BestOfMedia_AllSniffs
                 $className = str_replace(DIRECTORY_SEPARATOR, '_', $className);
 
                 include_once $filePath;
-                var_dump($className);
+
                 $class = new $className('getErrorList');
                 $suite->addTest($class);
             }//end foreach

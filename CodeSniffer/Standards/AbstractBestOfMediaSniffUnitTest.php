@@ -49,6 +49,8 @@ abstract class AbstractBestOfMediaSniffUnitTest extends PHPUnit_Framework_TestCa
             self::$phpcs->cli = $this->getMockBuilder('PHP_CodeSniffer_CLI')
               ->setMethods(array('getCommandLineValues'))
               ->getMock();
+            self::$phpcs->cli->errorSeverity = 10;
+            self::$phpcs->cli->warningSeverity = 5;
 
             self::$phpcs->cli->expects($this->any())
               ->method('getCommandLineValues')
@@ -77,7 +79,7 @@ abstract class AbstractBestOfMediaSniffUnitTest extends PHPUnit_Framework_TestCa
      * @return void
      * @throws PHPUnit_Framework_Error
      */
-    protected final function runTest()
+    protected function runTest()
     {
         // Skip this test if we can't run in this environment.
         if ($this->shouldSkipTest() === true) {
@@ -123,7 +125,6 @@ abstract class AbstractBestOfMediaSniffUnitTest extends PHPUnit_Framework_TestCa
         sort($testFiles);
 
         self::$phpcs->process(array(), dirname(__FILE__).DIRECTORY_SEPARATOR.$standardName.DIRECTORY_SEPARATOR.'ruleset.xml', array($sniffClass));
-
         self::$phpcs->setIgnorePatterns(array());
 
         $failureMessages = array();
@@ -135,13 +136,12 @@ abstract class AbstractBestOfMediaSniffUnitTest extends PHPUnit_Framework_TestCa
             }
 
             $files = self::$phpcs->getFiles();
-
             if (empty($files) === true) {
                 // File was skipped for some reason.
                 echo "Skipped: $testFile\n";
                 $this->markTestSkipped();
             }
-            
+
             $file = array_pop($files);
 
             $failures        = $this->generateFailureMessages($file);
