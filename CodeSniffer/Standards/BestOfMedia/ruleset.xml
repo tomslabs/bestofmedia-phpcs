@@ -2,6 +2,14 @@
 <ruleset name="BestOfMedia">
  <description>BestOfMedia - Extended Symfony coding standards code sniffer ruleset.</description>
 
+  <rule ref="BestOfMedia.Symfony.SfActionsMethodDeclaration.MustBePublic">
+    <severity>8</severity>
+  </rule>
+
+  <rule ref="BestOfMedia.Symfony.SfActionsMethodDeclaration.MustBeExplicitlyPublic">
+    <severity>8</severity>
+  </rule>
+
   <rule ref="Generic.NamingConventions.ConstructorName.OldStyleCall">
     <severity>8</severity>
   </rule>
