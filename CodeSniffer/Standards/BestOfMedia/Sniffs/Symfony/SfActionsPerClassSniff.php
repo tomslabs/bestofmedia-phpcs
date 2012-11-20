@@ -50,7 +50,7 @@ class BestOfMedia_Sniffs_Symfony_SfActionsPerClassSniff implements PHP_CodeSniff
     $start = $tokens[$stackPtr]['scope_opener'];
     $end = $tokens[$stackPtr]['scope_closer'];
 
-    if ($phpcsFile->getFilename() !== 'actions.class.php' &&
+    if ($phpcsFile->getFilename() == 'actions.class.php' ||
       'sfActions' === $phpcsFile->findExtendedClassName($start)) {
       return;
     }
