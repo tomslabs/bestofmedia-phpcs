@@ -63,7 +63,10 @@ class BestOfMedia_Sniffs_Symfony_SfActionsPerClassSniff implements PHP_CodeSniff
         $count++;
       }
 
-      $start = $tokens[$functPtr]['scope_closer'];
+   	  $start += 1;
+      if(isset($tokens[$functPtr]['scope_closer'])) {
+        $start = $tokens[$functPtr]['scope_closer'];
+      }
     }
 
     if($count > $this->errorThreshold) {
