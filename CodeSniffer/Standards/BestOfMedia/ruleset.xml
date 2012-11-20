@@ -90,9 +90,6 @@
   <rule ref="Generic.Metrics.CyclomaticComplexity.TooHigh">
     <severity>8</severity>
   </rule>
-  <rule ref="Generic.Formatting.MultipleStatementAlignment.Incorrect">
-    <severity>8</severity>
-  </rule>
   <rule ref="Generic.Files.LineLength.MaxExceeded">
     <severity>8</severity>
   </rule>
