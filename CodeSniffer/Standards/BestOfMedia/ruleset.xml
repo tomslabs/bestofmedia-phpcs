@@ -2,6 +2,14 @@
 <ruleset name="BestOfMedia">
  <description>BestOfMedia - Extended Symfony coding standards code sniffer ruleset.</description>
 
+  <rule ref="BestOfMedia.DependencyInjection.Singleton.NotAllowed">
+    <severity>10</severity>
+  </rule>
+
+  <rule ref="BestOfMedia.DependencyInjection.Singleton.Tolerated">
+    <severity>8</severity>
+  </rule>
+
   <rule ref="BestOfMedia.Symfony.SfActionsPerClass.Messy">
     <severity>10</severity>
   </rule>
