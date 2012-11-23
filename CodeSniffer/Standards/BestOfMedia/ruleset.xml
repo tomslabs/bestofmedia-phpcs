@@ -58,6 +58,9 @@
   <rule ref="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceBeforeEquals">
     <severity>8</severity>
   </rule>
+  <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine">
+    <severity>0</severity>
+  </rule>
   <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie.SpaceBeforeBrace">
     <severity>8</severity>
   </rule>
@@ -134,9 +137,6 @@
     <severity>8</severity>
   </rule>
   <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier.Found">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine">
     <severity>8</severity>
   </rule>
   <rule ref="Generic.PHP.LowerCaseConstant.Found">

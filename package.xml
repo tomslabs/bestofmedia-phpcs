@@ -37,7 +37,7 @@
   <dir baseinstalldir="PHP" name="/">
    <file baseinstalldir="PHP" md5sum="66f2ac0ae21ec10901d6fc23448107b3" name="CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="61a2e3d2194e09eb9b2baf2221d751cf" name="CodeSniffer/Standards/AllSniffs.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="a5c87187dc466d6c5f0041cd4cb9603c" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
+   <file baseinstalldir="PHP" md5sum="9286249a36070dd7771753d3e8d295bd" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
    <file baseinstalldir="PHP" md5sum="344fce22838280e14f929bec40623b36" name="CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="f67866f1efca8d0e46246f927a36b4f8" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsMethodDeclarationSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="61b84d46dd9972182961e793d93bf78e" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsPerClassSniff.php" role="php" />
