@@ -10,8 +10,8 @@
   <email>gboddaert@bestofmedia.com</email>
   <active>yes</active>
  </lead>
- <date>2012-11-18</date>
- <time>23:11:37</time>
+ <date>2012-11-23</date>
+ <time>16:34:23</time>
  <version>
   <release>0.0.2snapshot</release>
   <api>1.4.0</api>
@@ -22,15 +22,27 @@
  </stability>
  <license uri="http://www.apache.org/licenses/">Apache License</license>
  <notes>
-foo bar
+[2012-11-23]
+ * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
+ * Added test on DependencyInjection sniff (2394845)
+ * Fixed AllSniffs.php test suite (654cd54)
+
+[2012-11-20]
+ * Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
+ * Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
+ * Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
+ * Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
  </notes>
  <contents>
   <dir baseinstalldir="PHP" name="/">
-   <file baseinstalldir="PHP" md5sum="66f2ac0ae21ec10901d6fc23448107b3" name="CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="516bcc329e1780e39ce96d4338477255" name="CodeSniffer/Standards/AllSniffs.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="98a6afb3b7f1b30e376ef2106fc81096" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
+   <file baseinstalldir="PHP" md5sum="66f2ac0ae21ec10901d6fc23448107b3" name="CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php" role="test" />
+   <file baseinstalldir="PHP" md5sum="61a2e3d2194e09eb9b2baf2221d751cf" name="CodeSniffer/Standards/AllSniffs.php" role="test" />
+   <file baseinstalldir="PHP" md5sum="a5c87187dc466d6c5f0041cd4cb9603c" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
+   <file baseinstalldir="PHP" md5sum="344fce22838280e14f929bec40623b36" name="CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="f67866f1efca8d0e46246f927a36b4f8" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsMethodDeclarationSniff.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="80280128da074474be34b979e25a1da8" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsPerClassSniff.php" role="php" />
+   <file baseinstalldir="PHP" md5sum="61b84d46dd9972182961e793d93bf78e" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsPerClassSniff.php" role="php" />
+   <file baseinstalldir="PHP" md5sum="99272ecae9ee174dfe760b905a429f86" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.inc" role="test" />
+   <file baseinstalldir="PHP" md5sum="9804eb4cb04dfb2124318677d449f450" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="49b795016cf42149343cef11327abbc6" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.inc" role="test" />
    <file baseinstalldir="PHP" md5sum="a861600d5d6347964296106e039ad0d9" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="86f9182b02246a99a4f44144f5ea1c1a" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.1.inc" role="test" />
@@ -92,6 +104,30 @@ Sniffs
 * Count executeXXX in sfActions or actions.class.php file.
 * Validate executeXXX formalism in sfActions or actions.class.php file.
    </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.2snapshot</release>
+    <api>1.4.0</api>
+   </version>
+   <stability>
+    <release>snapshot</release>
+    <api>stable</api>
+   </stability>
+   <date>2012-11-23</date>
+   <license uri="http://www.apache.org/licenses/">Apache License</license>
+ <notes>
+[2012-11-23]
+ * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
+ * Added test on DependencyInjection sniff (2394845)
+ * Fixed AllSniffs.php test suite (654cd54)
+
+[2012-11-20]
+ * Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
+ * Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
+ * Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
+ * Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
+ </notes>
   </release>
  </changelog>
 </package>
