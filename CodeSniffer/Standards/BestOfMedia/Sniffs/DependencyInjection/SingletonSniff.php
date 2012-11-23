@@ -24,8 +24,11 @@
 class BestOfMedia_Sniffs_DependencyInjection_SingletonSniff extends PHP_CodeSniffer_Standards_AbstractScopeSniff {
 
   protected $singletonCallPattern = array('/.?instance$/i');
-  protected $allowedClassContext = array('sfActions');
-  protected $allowedMethodContext = array('__construct');
+  protected $allowedClassMethodPattern = array(
+    array('/.*/', '/^__construct$/'),
+    array('/.*Actions$/', '/^execute[A-Z].+/'),
+    array('/.*Task$/', '/^run$/'),
+  );
 
   /**
    * Constructs the test with the tokens it wishes to listen for.
@@ -33,39 +36,57 @@ class BestOfMedia_Sniffs_DependencyInjection_SingletonSniff extends PHP_CodeSnif
    * @return void
    */
   public function __construct() {
-    parent::__construct(array(T_FUNCTION), array(T_PAAMAYIM_NEKUDOTAYIM), true);
+    parent::__construct(array(T_FUNCTION), array(T_PAAMAYIM_NEKUDOTAYIM), false);
   }
 
   protected function processTokenWithinScope(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $currScope) {
     $tokens  = $phpcsFile->getTokens();
 
     $classPtr = $phpcsFile->getCondition($currScope, T_CLASS);
-    $className = $phpcsFile->getDeclarationName($classPtr);
-    $classParent = $phpcsFile->findExtendedClassName($classPtr);
+    if(!$classPtr) {
+      // calling a static in function is like calling from a static method.
+      return;
+    }
+
+    if($classPtr) {
+      $className = $phpcsFile->getDeclarationName($classPtr);
+      $classParent = $phpcsFile->findExtendedClassName($classPtr);
+    }
     $functionName = $phpcsFile->getDeclarationName($currScope);
     $functionProp = $phpcsFile->getMethodProperties($currScope);
 
+    if(true === $functionProp['is_static']) {
+      return;
+    }
+
+    $matchSingletonPattern = false;
     foreach($this->singletonCallPattern as $pattern) {
-      if(preg_match($pattern, $tokens[$stackPtr+1]['content'])) {
-        if(in_array($className, $this->allowedClassContext) ||
-          in_array($classParent, $this->allowedClassContext) ) {
-          // Found in a class that is allowed to use singleton calls.
-          return;
-        }
+      $matchSingletonPattern = $matchSingletonPattern || preg_match($pattern, $tokens[$stackPtr+1]['content']);
+    }
 
-        if(true === $functionProp['is_static']) {
-          // A static call in a static is OK.
-          return;
-        }
+    if(false === $matchSingletonPattern) {
+      return;
+    }
 
-        if(in_array($functionName, $this->allowedMethodContext)) {
-          $error = 'Getting a singleton statically often means bad dependency injection management. But usage in %s is tolerated, try to inject it, please.';
-          $phpcsFile->addWarning($error, $stackPtr, 'Tolerated', array($functionName));
-        }
+    $isValid = false;
+    foreach($this->allowedClassMethodPattern as $pattern) {
+      $classPattern = $pattern[0];
+      $methodPattern = $pattern[1];
 
-        $error = 'You have no reason to call a singleton inside a non-static method. Please inject it as property.';
-        $phpcsFile->addError($error, $stackPtr, 'NotAllowed', array($functionName));
+      $classMatches = preg_match($classPattern, $className) || preg_match($classPattern, $classParent);
+      if(!$classMatches) {
+        continue;
       }
+
+      if(preg_match($methodPattern, $functionName)) {
+        $isValid = true;
+        break;
+      }
+    }
+
+    if(!$isValid) {
+      $error = 'You have no reason to call a singleton inside a non-static %s::%s method. Please inject it as property.';
+      $phpcsFile->addError($error, $stackPtr, 'NotAllowed', array($className, $functionName));
     }
   }
 
