@@ -23,6 +23,8 @@
  <license uri="http://www.apache.org/licenses/">Apache License</license>
  <notes>
 [2012-11-23]
+ * Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
+ * Added a git changelog script. (e90209d)
  * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
  * Added test on DependencyInjection sniff (2394845)
  * Fixed AllSniffs.php test suite (654cd54)
@@ -118,6 +120,8 @@ Sniffs
    <license uri="http://www.apache.org/licenses/">Apache License</license>
  <notes>
 [2012-11-23]
+ * Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
+ * Added a git changelog script. (e90209d)
  * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
  * Added test on DependencyInjection sniff (2394845)
  * Fixed AllSniffs.php test suite (654cd54)
