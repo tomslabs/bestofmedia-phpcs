@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="BestOfMedia">
- <description>BestOfMedia - Extended Symfony coding standards code sniffer ruleset.</description>
+  <description>BestOfMedia - Extended Symfony coding standards code sniffer ruleset.</description>
 
   <rule ref="BestOfMedia.DependencyInjection.Singleton.NotAllowed">
     <severity>10</severity>
@@ -38,9 +38,6 @@
     <severity>8</severity>
   </rule>
   <rule ref="Generic.VersionControl.SubversionProperties.NoMatch">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing">
     <severity>8</severity>
   </rule>
   <rule ref="Generic.WhiteSpace.ScopeIndent.typ">
@@ -195,7 +192,7 @@
   </rule>
   <rule ref="Generic.Files.LineLength">
     <properties>
-      <property name="lineLimit" value="160" />
+      <property name="lineLimit" value="160"/>
     </properties>
   </rule>
   <rule ref="Generic.Files.LineLength.MaxExceeded">
@@ -203,7 +200,7 @@
   </rule>
   <rule ref="Generic.Files.LineLength">
     <properties>
-      <property name="absoluteLineLimit" value="0" />
+      <property name="absoluteLineLimit" value="0"/>
     </properties>
   </rule>
   <rule ref="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma">
@@ -216,9 +213,6 @@
     <severity>6</severity>
   </rule>
   <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceIndent">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine">
     <severity>6</severity>
   </rule>
   <rule ref="Generic.Metrics.CyclomaticComplexity.MaxExceeded">
@@ -250,8 +244,8 @@
   </rule>
   <rule ref="Generic.WhiteSpace.ScopeIndent">
     <properties>
-      <property name="indent" value="2" />
-      <property name="exact" value="false" />
+      <property name="indent" value="2"/>
+      <property name="exact" value="false"/>
     </properties>
   </rule>
   <rule ref="Generic.WhiteSpace.ScopeIndent.typ">
