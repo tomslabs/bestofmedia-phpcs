@@ -13,7 +13,7 @@
 
 // Require this here so that the unit tests don't have to try and find the
 // abstract class once it is installed into the PEAR tests directory.
-require_once 'tests/PHP_CodeSniffer/CodeSniffer/Standards/AbstractSniffUnitTest.php';
+require_once 'CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php';
 require_once 'PHP/CodeSniffer.php';
 
 /**
