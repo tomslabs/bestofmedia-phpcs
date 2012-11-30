@@ -10,10 +10,16 @@
   <email>gboddaert@bestofmedia.com</email>
   <active>yes</active>
  </lead>
- <date>2012-11-23</date>
- <time>16:34:23</time>
+ <helper>
+  <name>Pierre Marichez</name>
+  <user>πR</user>
+  <email>pmarichez@bestofmedia.com</email>
+  <active>yes</active>
+ </helper>
+ <date>2012-11-30</date>
+ <time>11:07:00</time>
  <version>
-  <release>0.0.2</release>
+  <release>0.0.3</release>
   <api>1.4.0</api>
  </version>
  <stability>
@@ -22,29 +28,22 @@
  </stability>
  <license uri="http://www.apache.org/licenses/">Apache License</license>
  <notes>
-[2012-11-23]
- * Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
- * Added a git changelog script. (e90209d)
- * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
- * Added test on DependencyInjection sniff (2394845)
- * Fixed AllSniffs.php test suite (654cd54)
-
-[2012-11-20]
- * Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
- * Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
- * Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
- * Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
+[2012-11-30]
+* Add new sniff to forbid usages of non multibyte functions (64e415a)
  </notes>
  <contents>
   <dir baseinstalldir="PHP" name="/">
    <file baseinstalldir="PHP" md5sum="66f2ac0ae21ec10901d6fc23448107b3" name="CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="61a2e3d2194e09eb9b2baf2221d751cf" name="CodeSniffer/Standards/AllSniffs.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="9286249a36070dd7771753d3e8d295bd" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
+   <file baseinstalldir="PHP" md5sum="e08826f456896524d842b31ce1257c06" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
    <file baseinstalldir="PHP" md5sum="344fce22838280e14f929bec40623b36" name="CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonSniff.php" role="php" />
+   <file baseinstalldir="PHP" md5sum="f170e9ff99cbbfd30a0069e73a53b7d6" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Encoding/ForbidNonUTF8FunctionSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="f67866f1efca8d0e46246f927a36b4f8" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsMethodDeclarationSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="61b84d46dd9972182961e793d93bf78e" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsPerClassSniff.php" role="php" />
    <file baseinstalldir="PHP" md5sum="99272ecae9ee174dfe760b905a429f86" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.inc" role="test" />
    <file baseinstalldir="PHP" md5sum="9804eb4cb04dfb2124318677d449f450" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.php" role="test" />
+   <file baseinstalldir="PHP" md5sum="1d72ac0ad417b748d35b87778871d3cd" name="CodeSniffer/Standards/BestOfMedia/Tests/Encoding/ForbidNonUTF8FunctionUnitTest.inc" role="test" />
+   <file baseinstalldir="PHP" md5sum="c3ce8b52b6eed37ffa773963bad290fa" name="CodeSniffer/Standards/BestOfMedia/Tests/Encoding/ForbidNonUTF8FunctionUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="49b795016cf42149343cef11327abbc6" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.inc" role="test" />
    <file baseinstalldir="PHP" md5sum="a861600d5d6347964296106e039ad0d9" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.php" role="test" />
    <file baseinstalldir="PHP" md5sum="86f9182b02246a99a4f44144f5ea1c1a" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.1.inc" role="test" />
@@ -85,7 +84,7 @@
    <date>2012-11-16</date>
    <license uri="http://www.apache.org/licenses/">Apache License</license>
    <notes>
-* Initial releas
+* Initial release
    </notes>
   </release>
   <release>
@@ -118,20 +117,36 @@ Sniffs
    </stability>
    <date>2012-11-23</date>
    <license uri="http://www.apache.org/licenses/">Apache License</license>
- <notes>
+   <notes>
 [2012-11-23]
- * Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
- * Added a git changelog script. (e90209d)
- * Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
- * Added test on DependencyInjection sniff (2394845)
- * Fixed AllSniffs.php test suite (654cd54)
+* Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
+* Added a git changelog script. (e90209d)
+* Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
+* Added test on DependencyInjection sniff (2394845)
+* Fixed AllSniffs.php test suite (654cd54)
 
 [2012-11-20]
- * Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
- * Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
- * Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
- * Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
- </notes>
+* Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
+* Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
+* Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
+* Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.3</release>
+    <api>1.4.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2012-11-30</date>
+   <license uri="http://www.apache.org/licenses/">Apache License</license>
+   <notes>
+[2012-11-30]
+* Add new sniff to forbid usages of non multibyte functions (64e415a)
+   </notes>
   </release>
  </changelog>
 </package>
