@@ -32,9 +32,23 @@ class BestOfMedia_Sniffs_Symfony_SfActionsMethodDeclarationSniff extends PHP_Cod
     parent::__construct(array(T_CLASS, T_INTERFACE), array(T_FUNCTION), true);
   }
 
+  private function isAnActionClass(PHP_CodeSniffer_File $phpcsFile, $stackPtr) {
+
+
+    if($phpcsFile->getFilename() == 'actions.class.php') {
+      return true;
+    }
+
+    $parentClassPos = $phpcsFile->findPrevious(array(T_CLASS, T_INTERFACE), $stackPtr);
+    if('sfActions' == $phpcsFile->findExtendedClassName($parentClassPos)) {
+      return true;
+    }
+
+    return false;
+  }
+
   protected function processTokenWithinScope(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $currScope) {
-    if($phpcsFile->getFilename() !== 'actions.class.php' &&
-      'sfActions' === $phpcsFile->findExtendedClassName($stackPtr)) {
+    if(!$this->isAnActionClass($phpcsFile, $stackPtr)) {
       return;
     }
 

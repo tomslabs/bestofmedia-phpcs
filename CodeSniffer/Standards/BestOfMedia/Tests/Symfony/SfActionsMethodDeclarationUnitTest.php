@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Unit test class for the ActionsPerClass sniff.
  *
@@ -23,43 +24,50 @@
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache License
  * @link      http://tomslabs.github.com/pear/
  */
-class BestOfMedia_Tests_Symfony_SfActionsMethodDeclarationUnitTest extends AbstractBestOfMediaSniffUnitTest
-{
+class BestOfMedia_Tests_Symfony_SfActionsMethodDeclarationUnitTest extends AbstractBestOfMediaSniffUnitTest {
 
-
-    /**
-     * Returns the lines where errors should occur.
-     *
-     * The key of the array should represent the line number and the value
-     * should represent the number of errors that should occur on that line.
-     *
-     * @return array(int => int)
-     */
-    public function getErrorList() {
+  /**
+   * Returns the lines where errors should occur.
+   *
+   * The key of the array should represent the line number and the value
+   * should represent the number of errors that should occur on that line.
+   *
+   * @return array(int => int)
+   */
+  public function getErrorList($testFile = '') {
+    switch ($testFile) {
+      case 'SfActionsMethodDeclarationUnitTest.1.inc':
         return array(
-                16  => 1,
-                22  => 1,
-                28  => 1,
+          16 => 1,
+          22 => 1,
+          28 => 1,
         );
-    }//end getErrorList()
 
+      case 'SfActionsMethodDeclarationUnitTest.2.inc':
 
-    /**
-     * Returns the lines where warnings should occur.
-     *
-     * The key of the array should represent the line number and the value
-     * should represent the number of warnings that should occur on that line.
-     *
-     * @return array(int => int)
-     */
-    public function getWarningList()
-    {
-        return array(
-                10  => 1,
-               );
+        return array();
     }
+  }
 
+//end getErrorList()
 
+  /**
+   * Returns the lines where warnings should occur.
+   *
+   * The key of the array should represent the line number and the value
+   * should represent the number of warnings that should occur on that line.
+   *
+   * @return array(int => int)
+   */
+  public function getWarningList($testFile = '') {
+    switch ($testFile) {
+      case 'SfActionsMethodDeclarationUnitTest.1.inc':
+        return array(
+          10 => 1,
+        );
+
+      case 'SfActionsMethodDeclarationUnitTest.2.inc':
+        return array();
+    }
+  }
 }
-
-?>

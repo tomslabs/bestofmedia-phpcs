@@ -11,7 +11,7 @@
  * @link      http://tomslabs.github.com/pear/
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
+require_once 'PHPUnit/Autoload.php';
 
 /**
  * An abstract class that all sniff unit tests must extend.
