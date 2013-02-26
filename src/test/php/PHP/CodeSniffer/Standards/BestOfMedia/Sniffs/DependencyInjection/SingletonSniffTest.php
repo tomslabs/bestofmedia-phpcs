@@ -1,71 +1,26 @@
 <?php
 
-class BestOfMedia_Sniffs_DependencyInjection_SingletonSniffTest extends PHPUnit_Framework_TestCase
-{
-  public function testX() {
-    $file = '/home/sites/bestofmedia-phpcs/src/test/resources/PHP/CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonUnitTest.inc';
-
-    $phpcs = new PHP_CodeSniffer_Bom();
-    $phpcs->cli = $this->getMockBuilder('PHP_CodeSniffer_CLI')
-      ->setMethods(array('getCommandLineValues'))
-      ->getMock();
-
-    $phpcs->cli->errorSeverity = 10;
-    $phpcs->cli->warningSeverity = 5;
-
-    $phpcs->cli->expects($this->any())
-      ->method('getCommandLineValues')
-      ->will($this->returnValue(array()));
-
-    $phpcs->addListener('BestOfMedia_Sniffs_DependencyInjection_SingletonSniff');
-    $phpcs->populateTokenListeners();
-    $sniff = new BestOfMedia_Sniffs_DependencyInjection_SingletonSniff();
-
-    $tokenizers =  array('php' => 'PHP', 'inc' => 'PHP', 'js'  => 'JS', 'css' => 'CSS');
-    $sniffs = $phpcs->getTokenSniffs();
-    $standard = array('BestOfMedia.DependencyInjection.Singleton.NotAllowed' => array(
-      'warning' => false,
-      'severity' => 10,
-    ));
-    $phpcsFile = new PHP_CodeSniffer_File($file, $sniffs['file'], $phpcs->allowedFileExtensions, $standard, $phpcs);
-    $phpcsFile->start();
-
-    $this->assertCount(count($this->getErrorList()), $phpcsFile->getErrorList());
-    var_dump($phpcsFile->getWarnings());
-  }
+class BestOfMedia_Sniffs_DependencyInjection_SingletonSniffTest extends AbstractStandardTest {
 
   /**
-   * Returns the lines where errors should occur.
-   *
-   * The key of the array should represent the line number and the value
-   * should represent the number of errors that should occur on that line.
-   *
-   * @return array(int => int)
+   * @group unittest
    */
-  public function getErrorList()
-  {
-    return array(
-      19 => 1,
-      49 => 1,
-      62 => 1,
-      64 => 1,
-      66 => 1,
-      68 => 1,
+  public function testSniffer() {
+    $file = $this->getParsedCodeSnifferFile(
+      $this->getResourceFilePath('PHP/CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonSniff.inc'),
+      'BestOfMedia_Sniffs_DependencyInjection_SingletonSniff',
+      array(
+      'NotAllowed' => 10
+      )
     );
-  }
 
-  /**
-   * Returns the lines where warnings should occur.
-   *
-   * The key of the array should represent the line number and the value
-   * should represent the number of warnings that should occur on that line.
-   *
-   * @return array(int => int)
-   */
-  public function getWarningList()
-  {
-    return array(
-    );
+    $this->assertPhpCsError($file, 19, 'You have no reason to call a singleton inside a non-static mymoduleActions::myMethod method. Please inject it as property.');
+    $this->assertPhpCsError($file, 49, 'You have no reason to call a singleton inside a non-static myTask::myMethod method. Please inject it as property.');
+    $this->assertPhpCsError($file, 62, 'You have no reason to call a singleton inside a non-static anotherClass::myMethod method. Please inject it as property.');
+    $this->assertPhpCsError($file, 64, 'You have no reason to call a singleton inside a non-static anotherClass::myMethod method. Please inject it as property.');
+    $this->assertPhpCsError($file, 66, 'You have no reason to call a singleton inside a non-static anotherClass::myMethod method. Please inject it as property.');
+    $this->assertPhpCsError($file, 68, 'You have no reason to call a singleton inside a non-static anotherClass::myMethod method. Please inject it as property.');
+    $this->assertCountPhpCsWarning($file, 0);
+    $this->assertCountPhpCsError($file, 6);
   }
-
 }
