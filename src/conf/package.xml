@@ -31,30 +31,8 @@
 [2013-01-15]
  * Fixed SfActionsMethodDeclaration sniff (9079f0a)
  </notes>
- <contents>
-  <dir baseinstalldir="PHP" name="/">
-   <file baseinstalldir="PHP" md5sum="f7a99a8a159b59059601ba1b3146ce7c" name="CodeSniffer/Standards/AbstractBestOfMediaSniffUnitTest.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="61a2e3d2194e09eb9b2baf2221d751cf" name="CodeSniffer/Standards/AllSniffs.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="e08826f456896524d842b31ce1257c06" name="CodeSniffer/Standards/BestOfMedia/ruleset.xml" role="php" />
-   <file baseinstalldir="PHP" md5sum="344fce22838280e14f929bec40623b36" name="CodeSniffer/Standards/BestOfMedia/Sniffs/DependencyInjection/SingletonSniff.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="f170e9ff99cbbfd30a0069e73a53b7d6" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Encoding/ForbidNonUTF8FunctionSniff.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="850526d177a3315dee09e5a3f32da03f" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsMethodDeclarationSniff.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="61b84d46dd9972182961e793d93bf78e" name="CodeSniffer/Standards/BestOfMedia/Sniffs/Symfony/SfActionsPerClassSniff.php" role="php" />
-   <file baseinstalldir="PHP" md5sum="99272ecae9ee174dfe760b905a429f86" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="9804eb4cb04dfb2124318677d449f450" name="CodeSniffer/Standards/BestOfMedia/Tests/DependencyInjection/SingletonUnitTest.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="1d72ac0ad417b748d35b87778871d3cd" name="CodeSniffer/Standards/BestOfMedia/Tests/Encoding/ForbidNonUTF8FunctionUnitTest.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="c3ce8b52b6eed37ffa773963bad290fa" name="CodeSniffer/Standards/BestOfMedia/Tests/Encoding/ForbidNonUTF8FunctionUnitTest.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="49b795016cf42149343cef11327abbc6" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.1.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="9b9989ed9292318595f85ff76032924d" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.2.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="12ccf059ae599e9352da755439cb8d7a" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsMethodDeclarationUnitTest.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="86f9182b02246a99a4f44144f5ea1c1a" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.1.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="2d0a2b97cdb5cec57312eded739a63a9" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.2.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="b9a87fc40bbd7240304c35ccfbad8c34" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.3.inc" role="test" />
-   <file baseinstalldir="PHP" md5sum="8905de8b6a937964f6936b1da2fea42d" name="CodeSniffer/Standards/BestOfMedia/Tests/Symfony/SfActionsPerClassUnitTest.php" role="test" />
-   <file baseinstalldir="PHP" md5sum="4c36da3c66ec9c15ad1e3174b0976e2e" name="LICENSE" role="data" />
-   <file baseinstalldir="PHP" md5sum="2c66317e5c87874a3449bd7c53e70613" name="README" role="data" />
-  </dir>
- </contents>
+ <!-- to be filled by abc -->
+ <contents/>
  <dependencies>
   <required>
    <php>
