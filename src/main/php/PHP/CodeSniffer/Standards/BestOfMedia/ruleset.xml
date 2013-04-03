@@ -29,9 +29,6 @@
   <rule ref="Generic.NamingConventions.ConstructorName.OldStyleCall">
     <severity>8</severity>
   </rule>
-  <rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
-    <severity>8</severity>
-  </rule>
   <rule ref="Generic.CodeAnalysis.EmptyStatement.NotAllowedWarning">
     <severity>8</severity>
   </rule>
@@ -56,14 +53,16 @@
   <rule ref="Generic.Files.LineLength.TooLong">
     <severity>8</severity>
   </rule>
+<rule ref="Generic.Files.LineLength">
+<properties>
+<property name="lineLimit" value="160"/>
+</properties>
+</rule>
   <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop.CanSimplify">
     <severity>8</severity>
   </rule>
   <rule ref="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceBeforeEquals">
     <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine">
-    <severity>0</severity>
   </rule>
   <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie.SpaceBeforeBrace">
     <severity>8</severity>
@@ -98,7 +97,7 @@
   <rule ref="Generic.Metrics.CyclomaticComplexity.TooHigh">
     <severity>8</severity>
   </rule>
-  <rule ref="Generic.Files.LineLength.MaxExceeded">
+  <rule ref="Generic.Formatting.MultipleStatementAlignment.Incorrect">
     <severity>8</severity>
   </rule>
   <rule ref="Generic.Metrics.CyclomaticComplexity.MaxExceeded">
@@ -170,90 +169,8 @@
   <rule ref="Generic.VersionControl.SubversionProperties.">
     <severity>8</severity>
   </rule>
-  <rule ref="Generic.CodeAnalysis.EmptyStatement.NotAllowed">
-    <severity>10</severity>
-  </rule>
-  <rule ref="Generic.CodeAnalysis.EmptyStatement.NotAllowedWarning">
-    <severity>10</severity>
-  </rule>
-  <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.Found">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.CodeAnalysis.UselessOverridingMethod.Found">
-    <severity>8</severity>
-  </rule>
   <rule ref="Generic.Commenting.Todo.TaskFound">
     <severity>10</severity>
-  </rule>
-  <rule ref="Generic.Files.LineEndings.InvalidEOLChar">
-    <severity>10</severity>
-  </rule>
-  <rule ref="Generic.Files.LineLength.TooLong">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Files.LineLength">
-    <properties>
-      <property name="lineLimit" value="160"/>
-    </properties>
-  </rule>
-  <rule ref="Generic.Files.LineLength.MaxExceeded">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Files.LineLength">
-    <properties>
-      <property name="absoluteLineLimit" value="0"/>
-    </properties>
-  </rule>
-  <rule ref="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceIndent">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.Metrics.CyclomaticComplexity.MaxExceeded">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Metrics.CyclomaticComplexity.TooHigh">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Metrics.NestingLevel.TooHigh">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.NamingConventions.UpperCaseConstantName.ClassConstantNotUpperCase">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.NamingConventions.UpperCaseConstantName.ConstantNotUpperCase">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.PHP.LowerCaseConstant.Found">
-    <severity>10</severity>
-  </rule>
-  <rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
-    <severity>8</severity>
-  </rule>
-  <rule ref="Generic.Strings.UnnecessaryStringConcat.Found">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
-    <severity>6</severity>
-  </rule>
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2"/>
-      <property name="exact" value="false"/>
-    </properties>
-  </rule>
-  <rule ref="Generic.WhiteSpace.ScopeIndent.typ">
-    <severity>6</severity>
   </rule>
 </ruleset>
 
