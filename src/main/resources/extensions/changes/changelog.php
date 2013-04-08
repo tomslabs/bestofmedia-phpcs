@@ -2,7 +2,7 @@
 <?php
 
 $changes = realpath(dirname(__FILE__)."/../../../../site/docx/changes.xml");
-echo "Altering $changes";
+echo "Altering $changes\n";
 
 $xml = simplexml_load_file($changes);
 unset($xml->body);
@@ -49,6 +49,9 @@ function gitTagAsReleaseXml(SimpleXMLElement $body, $tag) {
   $release->addAttribute('version', $tag);
   $release->addAttribute('date', $date);
   $release->addAttribute('description', $text) ;
+
+  echo "[$tag]\n$text\n\n";
+
   return $release;
 }
 
@@ -57,8 +60,6 @@ function gitLogAsActionXml(SimpleXMLElement $release, $hash) {
   exec("git log -1 --format=\"%s\" $hash", $text);
   $text = wordwrap(implode("\n", $text), 68, "\n", true);
 
-  var_dump($text);
-
   $shorthash = exec("git log -1 --format=\"%h\" $hash");
   $author = exec("git log -1 --format=\"%an\" $hash");
 
@@ -66,6 +67,8 @@ function gitLogAsActionXml(SimpleXMLElement $release, $hash) {
   $action->addAttribute('date', $shorthash);
   $action->addAttribute('dev', $author);
   $action->addAttribute('type', 'fix');
+
+  echo "  *  $text\n";
 }
 
 $xml->asXML($changes);
