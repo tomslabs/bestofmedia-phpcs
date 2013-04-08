@@ -1,2 +1,107 @@
-.nie.
+bestofmedia-phpcs-0.0.5 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- force test purpose Fixed in commit #8cf4336.
+- Switched dev to 0.0.6 Fixed in commit #bc24847.
+
+bestofmedia-phpcs-0.0.3 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- Changed version in package.xml Fixed in commit #2f85016.
+- Applied last PHPCS settings from our sonar configuration. Fixed in 
+  commit #1829b12.
+- Fix verify failures Fixed in commit #6c16ecc.
+- Fixed a build error Fixed in commit #b0d0521.
+- Successfully upgraded test from crappy PHPCS template to pure 
+  PHPUnit tests Fixed in commit #88b2695.
+- First ABC based test, what a crap Fixed in commit #4b91a60.
+- Fixed SfActionsMethodDeclaration sniff Fixed in commit #f404039.
+- Minimal README for my fellow coworkers Fixed in commit #636440e.
+
+bestofmedia-phpcs-0.0.2 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- Update build.sh to handle MAC platform. Update package.xml Fixed in 
+  commit #fb12d9c.
+- Add new sniff to forbid usages of non multibyte functions Fixed in 
+  commit #64e415a.
+
+bestofmedia-phpcs-0.0.1 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- 0.0.2 (not snapshot) Fixed in commit #a6bdc09.
+- Release 0.0.2 Fixed in commit #6450980.
+- Updated changelog. Fixed in commit #4ca126f.
+- Set violation severity to 0 for 
+  Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLin 
+  e Fixed in commit #560902f.
+- Added a git changelog script. Fixed in commit #e90209d.
+- Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing 
+  and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine 
+  from BestOfMedia standard Fixed in commit #e677939.
+- Added test on DependencyInjection sniff Fixed in commit #2394845.
+- Fixed AllSniffs.php test suite Fixed in commit #654cd54.
+- Added a sniffer that refuses singleton usage in non-static, non 
+  whitelisted class/methods Fixed in commit #4fe3268.
+- Removed annoying 
+  Generic.Formatting.MultipleStatementAlignment.Incorrect from 
+  BestOfMedia standard. Fixed in commit #c9276cb.
+- Fixed a bug preventing actions.class.php file with no parent 
+  sfActions to be scanned by SfActionsPerClassSniff. Fixed in commit 
+  #ba36d56.
+- Fixed a bug where a sfActions with abstract function cycled to 
+  death. Fixed in commit #ee4c644.
+
+bestofmedia-phpcs-0.0.0 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- Polished 0.0.1 version Fixed in commit #d84ffc7.
+- Added a sniffer that count the executeXXXX() methods from sfActions 
+  class, and requires low values. Fixed in commit #9e94d96.
+- SfActionsMethodDeclarationSniff adds expectations on method 
+  parameters. Fixed in commit #f18df82.
+- Fixed SfActionsMethodDeclarationSniff Fixed in commit #6560aad.
+- Attempt to add some homemade sniffs for Symfony, got difficulties 
+  with unit testing tough. Fixed in commit #996dc6f.
+- Fixed (again) build script, tgz now install itself Fixed in commit 
+  #c67debc.
+- Fixed build Fixed in commit #d5618e1.
+
+bestofmedia-phpcs-0.0.0 (2013-04-03 10:14:26 +0200)
+===================================================
+
+Changed version in package.xml
+
+- Polished 0.0.1 version Fixed in commit #d84ffc7.
+- Added a sniffer that count the executeXXXX() methods from sfActions 
+  class, and requires low values. Fixed in commit #9e94d96.
+- SfActionsMethodDeclarationSniff adds expectations on method 
+  parameters. Fixed in commit #f18df82.
+- Fixed SfActionsMethodDeclarationSniff Fixed in commit #6560aad.
+- Attempt to add some homemade sniffs for Symfony, got difficulties 
+  with unit testing tough. Fixed in commit #996dc6f.
+- Fixed (again) build script, tgz now install itself Fixed in commit 
+  #c67debc.
+- Fixed build Fixed in commit #d5618e1.
+- 0.0.0 Fixed in commit #74ed3c2.
+- . Fixed in commit #8121ff4.
+- . Fixed in commit #fa45d98.
+- . Fixed in commit #7d3f4c0.
+- . Fixed in commit #3c53605.
+- Moved in a more PEAR-like path Fixed in commit #2dd1cea.
+- . Fixed in commit #86631ff.
+- Renamed Fixed in commit #cdb6e21.
+- Initial commit (based on Zikula PHPCS rules). Fixed in commit 
+  #7b86832.
+- first commit Fixed in commit #a0f12e0.
 

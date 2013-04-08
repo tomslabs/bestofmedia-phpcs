@@ -1,147 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
- <name>PHP_CodeSniffer_Standards_BestOfMedia</name>
- <channel>tomslabs.github.com/pear</channel>
- <summary>BestOfMedia PHP_Code_Sniffer ruleset</summary>
- <description>A set of rules and sniffers matching BestOfMedia symfony 1.4 coding standards</description>
- <lead>
-  <name>Guillaume Boddaert</name>
-  <user>guibod</user>
-  <email>gboddaert@bestofmedia.com</email>
-  <active>yes</active>
- </lead>
- <helper>
-  <name>Pierre Marichez</name>
-  <user>πR</user>
-  <email>pmarichez@bestofmedia.com</email>
-  <active>yes</active>
- </helper>
- <date>2013-01-15</date>
- <time>10:01:06</time>
- <version>
-  <release>0.0.6</release>
-  <api>1.4.0</api>
- </version>
- <stability>
-  <release>stable</release>
-  <api>stable</api>
- </stability>
- <license uri="http://www.apache.org/licenses/">Apache License</license>
- <notes>
-[2013-01-15]
- * Fixed SfActionsMethodDeclaration sniff (9079f0a)
- </notes>
- <!-- to be filled by abc -->
- <contents/>
- <dependencies>
-  <required>
-   <php>
-    <min>5.1.2</min>
-   </php>
-   <pearinstaller>
-    <min>1.4.0b1</min>
-   </pearinstaller>
-   <package>
-    <name>PHP_CodeSniffer</name>
-    <channel>pear.php.net</channel>
-    <min>1.4.0</min>
-    <max>9.9.9</max>
-   </package>
-  </required>
- </dependencies>
- <phprelease />
- <changelog>
-  <release>
-   <version>
-    <release>0.0.0</release>
-    <api>1.4.0</api>
-   </version>
-   <stability>
-    <release>alpha</release>
-    <api>alpha</api>
-   </stability>
-   <date>2012-11-16</date>
-   <license uri="http://www.apache.org/licenses/">Apache License</license>
-   <notes>
-* Initial release
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.0.1</release>
-    <api>1.4.0</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>stable</api>
-   </stability>
-   <date>2012-11-18</date>
-   <license uri="http://www.apache.org/licenses/">Apache License</license>
-   <notes>
-First release that bundles homemade Sniffs and Testing
-
-Sniffs
-* Count executeXXX in sfActions or actions.class.php file.
-* Validate executeXXX formalism in sfActions or actions.class.php file.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.0.2</release>
-    <api>1.4.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <date>2012-11-23</date>
-   <license uri="http://www.apache.org/licenses/">Apache License</license>
-   <notes>
-[2012-11-23]
-* Set violation severity to 0 for Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine (560902f)
-* Added a git changelog script. (e90209d)
-* Removed Generic.Functions.OpeningFunctionBraceBsdAllman.BraceSpacing and Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine from BestOfMedia standard (e677939)
-* Added test on DependencyInjection sniff (2394845)
-* Fixed AllSniffs.php test suite (654cd54)
-
-[2012-11-20]
-* Added a sniffer that refuses singleton usage in non-static, non whitelisted class/methods (4fe3268)
-* Removed annoying Generic.Formatting.MultipleStatementAlignment.Incorrect from BestOfMedia standard. (c9276cb)
-* Fixed a bug preventing actions.class.php file with no parent sfActions to be scanned by SfActionsPerClassSniff. (ba36d56)
-* Fixed a bug where a sfActions with abstract function cycled to death. (ee4c644)
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.0.3</release>
-    <api>1.4.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <date>2012-11-30</date>
-   <license uri="http://www.apache.org/licenses/">Apache License</license>
-   <notes>
-[2012-11-30]
-* Add new sniff to forbid usages of non multibyte functions (64e415a)
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.0.4</release>
-    <api>1.4.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <date>2013-01-15</date>
-   <license uri="http://www.apache.org/licenses/">Apache License</license>
-   <notes>
-[2013-01-15]
- * Fixed SfActionsMethodDeclaration sniff (9079f0a)
-   </notes>
-  </release>
- </changelog>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.4" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>PHP_CodeSniffer_Standards_BestOfMedia</name>
+  <channel>tomslabs.github.com/pear</channel>
+  <summary>BestOfMedia PHP_Code_Sniffer ruleset</summary>
+  <description>A set of rules and sniffers matching BestOfMedia symfony 1.4 coding standards</description>
+  <lead>
+    <name>Guillaume Boddaert</name>
+    <user>guibod</user>
+    <email>gboddaert@bestofmedia.com</email>
+    <active>yes</active>
+  </lead>
+  <helper>
+    <name>Pierre Marichez</name>
+    <user>πR</user>
+    <email>pmarichez@bestofmedia.com</email>
+    <active>yes</active>
+  </helper>
+  <date>@date_release@</date>
+  <version>
+    <release>@version_release@</release>
+    <api>@version_api@</api>
+  </version>
+  <stability>
+    <release>@stability_release@</release>
+    <api>@stability_api@</api>
+  </stability>
+  <license uri="http://www.apache.org/licenses/">Apache License</license>
+  <notes>x</notes>
+  <!-- to be filled by abc -->
+  <contents/>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.1.2</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.0b1</min>
+      </pearinstaller>
+      <package>
+        <name>PHP_CodeSniffer</name>
+        <channel>pear.php.net</channel>
+        <min>1.4.0</min>
+        <max>9.9.9</max>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease/>
+  <changelog xmlns:pear="http://pear.php.net/dtd/package-2.0">
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.5</release>
+<api>0.0.5</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.3</release>
+<api>0.0.3</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.2</release>
+<api>0.0.2</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.1</release>
+<api>0.0.1</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.0</release>
+<api>0.0.0</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+<release>
+<date>2013-04-03 10:14:26 +0200</date>
+<stability>
+<release>stable</release>
+<api>stable</api>
+</stability>
+<version>
+<release>0.0.0</release>
+<api>0.0.0</api>
+</version>
+<notes>
+Changed version in package.xml
+</notes>
+</release>
+</changelog>
 </package>

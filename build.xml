@@ -11,5 +11,4 @@
 
     <antcall target="-codesniffer:install-or-upgrade"/>
   </target>
-
 </project>
