@@ -36,3 +36,9 @@ You can now start a new release version
 <pre>
 ant clean version:version scm:commit -Dscm.message="New version"
 </pre>
+
+## How to create a snapshot and release it ?
+
+<pre>
+ant clean package pirum
+</pre>
