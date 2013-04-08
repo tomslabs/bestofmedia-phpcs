@@ -34,7 +34,5 @@ ant clean package:release pirum scm:tag
 
 You can now start a new release version
 <pre>
-ant clean version:version scm:tag
+ant clean version:version scm:commit -Dscm.message="New version"
 </pre>
-
-##
